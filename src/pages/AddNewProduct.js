@@ -39,21 +39,21 @@ export const AddNewProduct = () => {
     event.preventDefault();
 
     if (
-      productDetails.department !== "" ||
-      productDetails.name !== "" ||
-      productDetails.description !== "" ||
-      productDetails.price !== "" ||
-      productDetails.stock !== "" ||
-      productDetails.sku !== "" ||
-      productDetails.supplier !== "" ||
-      productDetails.delivered !== "" ||
-      productDetails.imageUrl !== ""
+      productDetails.department === "" ||
+      productDetails.name === "" ||
+      productDetails.description === "" ||
+      productDetails.price === "" ||
+      productDetails.stock === "" ||
+      productDetails.sku === "" ||
+      productDetails.supplier === "" ||
+      productDetails.delivered === "" ||
+      productDetails.imageUrl === ""
     ) {
+      alert("Please fill all the Fields");
+    } else {
       addNewProduct(productDetails);
       clear();
       alert("New Product Added 🚀");
-    } else {
-      alert("Please fill all the Fields");
     }
   };
   return (
@@ -75,9 +75,9 @@ export const AddNewProduct = () => {
             id="department"
           >
             <option value="">Select an Option</option>
-            <option value="kitchen">Kitchen</option>
-            <option value="clothing">Clothing</option>
-            <option value="toys">Toys</option>
+            <option value="Kitchen">Kitchen</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Toys">Toys</option>
           </select>
         </div>
         <div className="group">

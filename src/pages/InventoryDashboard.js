@@ -7,9 +7,9 @@ export const InventoryDashboard = () => {
     (acc, curr) => {
       return (acc = {
         ...acc,
-        totalDelivered: acc.totalDelivered + curr.delivered,
-        totalStock: acc.totalStock + curr.stock,
-        LowStock: curr.stock <= 10 ? acc.LowStock + 1 : acc.LowStock,
+        totalDelivered: +acc.totalDelivered + +curr.delivered,
+        totalStock: +acc.totalStock + +curr.stock,
+        LowStock: +curr.stock <= 10 ? +acc.LowStock + 1 : +acc.LowStock,
       });
     },
     { totalStock: 0, totalDelivered: 0, LowStock: 0 }

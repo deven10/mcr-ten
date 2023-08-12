@@ -10,7 +10,7 @@ export const ProductsList = () => {
   const [allInventoryData, setAllInventoryData] = useState(
     JSON.parse(localStorage.getItem("allInventoryData"))
   );
-  const [selectedDepartment, setSelectedDepartment] = useState("kitchen");
+  const [selectedDepartment, setSelectedDepartment] = useState("All");
   const [sortBy, setSortBy] = useState("name");
   const [checkLowStock, setCheckLowStock] = useState(false);
 
@@ -24,7 +24,7 @@ export const ProductsList = () => {
 
   useEffect(() => {
     if (location.state === null) {
-      setSelectedDepartment(() => "kitchen");
+      setSelectedDepartment(() => "All");
     }
   }, [location]);
 
