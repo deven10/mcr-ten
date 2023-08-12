@@ -115,6 +115,7 @@ export const AddNewProduct = () => {
             className="form-input"
             type="number"
             min="1"
+            placeholder="0"
           />
         </div>
         <div className="group">
@@ -129,6 +130,7 @@ export const AddNewProduct = () => {
             name="stock"
             id=""
             min="0"
+            placeholder="0"
           />
         </div>
         <div className="group">
@@ -167,6 +169,7 @@ export const AddNewProduct = () => {
             name="delivered"
             id=""
             min="0"
+            placeholder="0"
           />
         </div>
         <div className="group">
