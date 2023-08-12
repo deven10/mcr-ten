@@ -113,7 +113,8 @@ export const AddNewProduct = () => {
             name="price"
             onChange={(e) => handleChange(e)}
             className="form-input"
-            type="text"
+            type="number"
+            min="1"
           />
         </div>
         <div className="group">
@@ -127,6 +128,7 @@ export const AddNewProduct = () => {
             type="number"
             name="stock"
             id=""
+            min="0"
           />
         </div>
         <div className="group">
@@ -164,6 +166,7 @@ export const AddNewProduct = () => {
             type="number"
             name="delivered"
             id=""
+            min="0"
           />
         </div>
         <div className="group">
